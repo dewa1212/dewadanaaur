@@ -1,0 +1,1 @@
+belajar sampe jago
