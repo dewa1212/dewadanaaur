@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DanaAurMusirawas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer-when-downgrade"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo animate-element">DanaAur</div>
+      <nav class="animate-element">
+        <ul>
+          <li><a href="#hero">Beranda</a></li>
+          <li><a href="#wisata">Objek Wisata</a></li>
+          <li><a href="#tentang-kami">Tentang Kami</a></li>
+          <li><a href="#pelayanan-terbaik">Pelayanan Terbaik</a></li>
+          <li><a href="#ulasan">Ulasan</a></li>
+          <li><a href="#footer">Kontak</a></li>
+          <li>
+            <a href="#hero" class="btn-pesan">Pesan Sekarang</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo-sidebar">DanaAur</div>
+          <div class="close-sidebar"><i class="fas fa-times"></i></div>
+        </div>
+        <hr class="sidebar-divider" />
+        <!-- Divider di sidebar -->
+        <ul class="sidebar-nav">
+          <li>
+            <a href="#hero"><i class="fas fa-home icon-sidebar"></i>Beranda</a>
+          </li>
+          <li>
+            <a href="#wisata"
+              ><i class="fas fa-map-marked-alt icon-sidebar"></i>Tempat
+              Wisata</a
+            >
+          </li>
+          <li>
+            <a href="#tentang-kami"
+              ><i class="fas fa-info-circle icon-sidebar"></i>Tentang Kami</a
+            >
+          </li>
+          <li>
+            <a href="#pelayanan-terbaik"
+              ><i class="fas fa-concierge-bell icon-sidebar"></i>Pelayanan
+              Terbaik</a
+            >
+          </li>
+          <li>
+            <a href="#ulasan"
+              ><i class="fas fa-comments icon-sidebar"></i>Ulasan</a
+            >
+          </li>
+          <li>
+            <a href="#footer"
+              ><i class="fas fa-envelope icon-sidebar"></i>Kontak</a
+            >
+          </li>
+          <li>
+            <a href="#pesan-sekarang" class="btn-pesan-sidebar"
+              ><i class="fab fa-whatsapp icon-sidebar"></i>Pesan Sekarang</a
+            >
+          </li>
+        </ul>
+        <hr class="sidebar-divider" />
+        <!-- Divider bawah sidebar -->
+        <p class="sidebar-footer">© 2024 WisataKuy</p>
+        <!-- Footer di sidebar -->
+      </div>
+    </header>
+
+    <section id="hero" class="hero animate-element">
+      <div class="hero-content">
+        <h1>
+          Selamat Datang di <br />
+          Destinasi Wisata Dana Aur Musirawas
+        </h1>
+        <p>
+          Di Mana Keajaiban Alam Berbisik dan Budaya Menyentuh Hati. Temukan
+          pengalaman wisata yang melampaui kata-kata.
+        </p>
+        <a
+          href="https://api.whatsapp.com/resolve/?deeplink=%2FNOMOR_WHATSAPP_ANDA%3Ftext%3DHalo%252C%2Bsaya%2Btertarik%2Buntuk%2Bmemesan%2Bpaket%2Bwisata%2BAnda.&not_found=1"
+          class="btn-hero"
+          >Pesan Sekarang <i class="fab fa-whatsapp"></i
+        ></a>
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://giwang.sumselprov.go.id/api/uploads/destinations/destination_17138582684428.jpeg"
+          alt="Pemandangan Wisata"
+        />
+      </div>
+    </section>
+    <section id="wisata" class="wisata animate-element">
+      <h2>Objek Wisata</h2>
+      <div class="list-wisata">
+        <div class="card-wisata">
+          <img
+            src="https://asset-2.tstatic.net/sumsel/foto/bank/images/Ribuan-Wisatawan-Kunjungi-Danau-Aur-Mura-Saat-Libur-Tahun-Baru-Kapal-Wisata-dan-Sepeda-Air-Diserbu.jpg"
+            alt="Pantai Eksotis"
+            data-caption="Suasana objek wisata Danau Aur di Kabupaten Musi Rawas, yang ramai dikunjungi wisatawan.."
+            onclick="openModal(this)"
+          />
+          <h3>Suasana wisata Danau Aur</h3>
+        </div>
+        <div class="card-wisata">
+          <img
+            src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/183/2024/08/04/chrome_AOMR92v6Ns-356981772.png"
+            alt="Gunung Megah"
+            data-caption="Buatlah moment bareng keluarga lebih menyenagkan berkujung ke danau aur serta abadikan moment mu."
+            onclick="openModal(this)"
+          />
+          <h3>Foto Bareng Keluarga</h3>
+        </div>
+        <div class="card-wisata">
+          <img
+            src="https://d.rapidcdn.app/snapinsta?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3Njb250ZW50LWFybjItMS5jZG5pbnN0YWdyYW0uY29tL3YvdDUxLjI5MzUwLTE1LzI3NTczODIwNV82NTYyMTg3Njg5ODkyNDNfNjM2NzQ4MzA2NTk2MjEzNjc5Nl9uLndlYnA_c3RwPWRzdC1qcGdfZTM1X3M2NDB4NjQwX3NoMC4wOF90dDYmZWZnPWV5SjJaVzVqYjJSbFgzUmhaeUk2SW1sdFlXZGxYM1Z5YkdkbGJpNHhNRGd3ZURneE1DNXpaSEl1WmpJNU16VXdMbVJsWm1GMWJIUmZhVzFoWjJVaWZRJl9uY19odD1zY29udGVudC1hcm4yLTEuY2RuaW5zdGFncmFtLmNvbSZfbmNfY2F0PTEwMyZfbmNfb2M9UTZjWjJBRUE1V3pJc2YwWHJ0d1otOHdDWlNobi1HX2ZScnNTaGhzQ1d1SDZQTS0temswMC1xelpGVGJDa21HTFZuUGRrejQmX25jX29oYz10YS1lUmp3SXNfa1E3a052Z0V1a0l5ViZfbmNfZ2lkPTJkNDU1ZjA0ODc4YTQ0M2ViMTEwMTY3ZGY1MTcwMDIxJmVkbT1BUHMxN0NVQkFBQUEmY2NiPTctNSZvaD0wMF9BWUJtdlNWNjRySUpJZXFZbTlhRjdpUmNCX2dzR19ZdFZqUkh6ZjRsUEtUTjFRJm9lPTY3QkU1RTBCJl9uY19zaWQ9MTBkMTNiIiwiZmlsZW5hbWUiOiJTbmFwaW5zdC5hcHBfdGh1bWJfMjc1NzM4MjA1XzY1NjIxODc2ODk4OTI0M182MzY3NDgzMDY1OTYyMTM2Nzk2X24ud2VicCJ9.PNbwqBU49Uqtn22HxRBRxO5sxJlwjtrkhzyQVKOjf6E"
+            alt="Hutan Tropis"
+            data-caption="Yok maen ke Danau Aur,,apapun kegiatan kamu bisa d lakukan di sini."
+            onclick="openModal(this)"
+          />
+          <h3>Senam Bersama</h3>
+        </div>
+        <div class="card-wisata">
+          <img
+            src="https://d.rapidcdn.app/snapinsta?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3Njb250ZW50LW1zcDEtMS5jZG5pbnN0YWdyYW0uY29tL3YvdDUxLjI5MzUwLTE1LzI3MTk4NTgwNl85MTcyODQ5NTIzMTE1NjFfNzU1Njc5ODE0MjczNTgwODY1Nl9uLndlYnA_c3RwPWRzdC1qcGdfZTM1X3A2NDB4NjQwX3NoMC4wOF90dDYmZWZnPWV5SjJaVzVqYjJSbFgzUmhaeUk2SW1sdFlXZGxYM1Z5YkdkbGJpNDNOVFo0T0RBMkxuTmtjaTVtTWprek5UQXVaR1ZtWVhWc2RGOXBiV0ZuWlNKOSZfbmNfaHQ9c2NvbnRlbnQtbXNwMS0xLmNkbmluc3RhZ3JhbS5jb20mX25jX2NhdD0xMDEmX25jX29jPVE2Y1oyQUU0YUNnSzNPM3haeTRMNFVVTm5ydE4tM0d1dEVQSi1hTEkyUWZrX2NvV0Zzc1pyb21lZHB2N0xpYmw3NmV3TEprJl9uY19vaGM9QmE3NDVwTnBrTWtRN2tOdmdGMVZ3RFomX25jX2dpZD1iODYwYzMyZGRmMzU0ZjdmOGY3MzlhYjIxNTJkZTAyZiZlZG09QVBzMTdDVUJBQUFBJmNjYj03LTUmb2g9MDBfQVlEcE0tYjFWOEltc1hLbXc1dHZVN3lZeGNVRWw4b1k1bXlrMGFZRjRnMkpBQSZvZT02N0JFNkVEMCZfbmNfc2lkPTEwZDEzYiIsImZpbGVuYW1lIjoiU25hcGluc3QuYXBwX3RodW1iXzI3MTk4NTgwNl85MTcyODQ5NTIzMTE1NjFfNzU1Njc5ODE0MjczNTgwODY1Nl9uLndlYnAifQ.rl_BYpjeswE48gM6-stuIA9yXn9Ni7DQ2fHnmlVK154"
+            alt="Danau Indah"
+            data-caption="Bupati dan Wabub kab.Musi Rawas pada saat mengunjungi Danau Aur kebanggaan dan Icon pariwisata Kab.Musi Rawas."
+            onclick="openModal(this)"
+          />
+          <h3>Bupati dan Wabub kab.Musi Rawas</h3>
+        </div>
+        <div class="card-wisata">
+          <img
+            src="https://d.rapidcdn.app/snapinsta?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3Njb250ZW50LWFtczQtMS5jZG5pbnN0YWdyYW0uY29tL3YvdDUxLjI5MzUwLTE1LzI4OTczMDI4NF83MTU0Mzc0NzMwNDY3MjdfMjE3MTQxNDY0MzQyMjEwMjI5MV9uLndlYnA_c3RwPWRzdC1qcGdfZTM1X3A2NDB4NjQwX3NoMC4wOF90dDYmZWZnPWV5SjJaVzVqYjJSbFgzUmhaeUk2SW1sdFlXZGxYM1Z5YkdkbGJpNHhNRGd3ZURFek5UQXVjMlJ5TG1ZeU9UTTFNQzVrWldaaGRXeDBYMmx0WVdkbEluMCZfbmNfaHQ9c2NvbnRlbnQtYW1zNC0xLmNkbmluc3RhZ3JhbS5jb20mX25jX2NhdD0xMDcmX25jX29jPVE2Y1oyQUhIbEFqSXhnYUtrSjlPYUtwc0RCeXBZVXZpNFNTSnRJdWJHbTBhM2hhV3Y1WVkyaFZCcklEYkdSdFc5WDFYR0FZJl9uY19vaGM9b2VORDZBZHVXZ3NRN2tOdmdFU3o0eWQmX25jX2dpZD01MTg3ZjdkMWEzYjk0MjZmYmZmMTIzOWRhMzk0NzQzNCZlZG09QVBzMTdDVUJBQUFBJmNjYj03LTUmb2g9MDBfQVlDQzZUV2FYcVBERzJlLTlDOS1Fa3V6R3NkeklVc0pSbjFOQVhmdm5qV2s2USZvZT02N0JFNUE2NCZfbmNfc2lkPTEwZDEzYiIsImZpbGVuYW1lIjoiU25hcGluc3QuYXBwX3RodW1iXzI4OTczMDI4NF83MTU0Mzc0NzMwNDY3MjdfMjE3MTQxNDY0MzQyMjEwMjI5MV9uLndlYnAifQ.WrkOZV32hctlnql5p3rKffN7TZjSdTGywUtYpESMxuU"
+            alt="Air Terjun Segar"
+            data-caption="bertujuan untuk mencegah terjadinya polusi lingkungan akibat bahan kimia berbahaya."
+            onclick="openModal(this)"
+          />
+          <h3>Green Chemistry</h3>
+        </div>
+        <div class="card-wisata">
+          <img
+            src="https://d.rapidcdn.app/snapinsta?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3Njb250ZW50LWFtczItMS5jZG5pbnN0YWdyYW0uY29tL3YvdDUxLjI5MzUwLTE1LzMyMTUzNzMwMV82OTkwNzc5NTE2NjcxNDZfODY1MDYxNTI5MTI5MDU0ODkyMl9uLndlYnA_c3RwPWRzdC1qcGdfZTM1X3M2NDB4NjQwX3NoMC4wOF90dDYmZWZnPWV5SjJaVzVqYjJSbFgzUmhaeUk2SW1sdFlXZGxYM1Z5YkdkbGJpNHhNRGd3ZURFd09EQXVjMlJ5TG1ZeU9UTTFNQzVrWldaaGRXeDBYMmx0WVdkbEluMCZfbmNfaHQ9c2NvbnRlbnQtYW1zMi0xLmNkbmluc3RhZ3JhbS5jb20mX25jX2NhdD0xMDImX25jX29jPVE2Y1oyQUZxV25oRElHNXNObUtZc0FYZWxMTC1zYlU0NW05bjlzN2x1dnVWSjdMRFRJNW1BUVdLLTYtaDNGR3pheGpWLWQ0Jl9uY19vaGM9N1FBSDY5Q2FRaU1RN2tOdmdGN3N1T2cmX25jX2dpZD05OGE5NGUzZDUyNTM0OTdiOGYxYjczOWU4MjYzMDMyZSZlZG09QVBzMTdDVUJBQUFBJmNjYj03LTUmb2g9MDBfQVlBM1NMeWo3QlFBWE9CVElHMjZVYlVsUzdYeGRaQ2xwNkFvNkozZldSU2ZfZyZvZT02N0JFNTlDNiZfbmNfc2lkPTEwZDEzYiIsImZpbGVuYW1lIjoiU25hcGluc3QuYXBwX3RodW1iXzMyMTUzNzMwMV82OTkwNzc5NTE2NjcxNDZfODY1MDYxNTI5MTI5MDU0ODkyMl9uLndlYnAifQ.MVsE-vbESjk7zbzN1umC21djfSb8s29leSdXf5pDH74"
+            alt="Pegunungan Es"
+            data-caption="Abadikan Moment mu"
+            onclick="openModal(this)"
+          />
+          <h3>Foto Lebih Keren</h3>
+        </div>
+        <div class="card-wisata">
+          <img
+            src="https://d.rapidcdn.app/snapinsta?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3Njb250ZW50LWFtczItMS5jZG5pbnN0YWdyYW0uY29tL3YvdDUxLjI5MzUwLTE1LzI5MDI0ODI2MV83MzIyOTEyMjc5MjEwMzlfOTEyMTI5MzQ0MzU3Nzc5NTg0Nl9uLndlYnA_c3RwPWRzdC1qcGdfZTM1X3M2NDB4NjQwX3NoMC4wOF90dDYmZWZnPWV5SjJaVzVqYjJSbFgzUmhaeUk2SW1sdFlXZGxYM1Z5YkdkbGJpNHhNRGd3ZURjeE1DNXpaSEl1WmpJNU16VXdMbVJsWm1GMWJIUmZhVzFoWjJVaWZRJl9uY19odD1zY29udGVudC1hbXMyLTEuY2RuaW5zdGFncmFtLmNvbSZfbmNfY2F0PTExMSZfbmNfb2M9UTZjWjJBR0x1cGZMeEtTRFU0bVUzY3h3MzRVSGdUTGhGZXlzbjBEa3JNWnVINk51cFlDcXREc0xGRU9zMGNrVDBlaXZFRGsmX25jX29oYz1qc2FiVG1oTDNNQVE3a052Z0VWR2xESiZfbmNfZ2lkPWI3ODdiNDA5YjNmODQwYTVhMGM4NjFmZWM1NmUzNDQwJmVkbT1BUHMxN0NVQkFBQUEmY2NiPTctNSZvaD0wMF9BWUJJYms1SEFKdzlSWkNDNXZhTFYwUC1LZWstNWo1NkZONjNjQ0l1VmZUT1BnJm9lPTY3QkU2MjdDJl9uY19zaWQ9MTBkMTNiIiwiZmlsZW5hbWUiOiJTbmFwaW5zdC5hcHBfdGh1bWJfMjkwMjQ4MjYxXzczMjI5MTIyNzkyMTAzOV85MTIxMjkzNDQzNTc3Nzk1ODQ2X24ud2VicCJ9.sNBQqIRGn35Ofi1W03O284ORx_zrf2PX-2IJ_i3eOGo"
+            alt="Gurun Pasir"
+            data-caption="Jelajahi danau yang luas dengan formasi batuan kapal unik dan langit yang cerah."
+            onclick="openModal(this)"
+          />
+          <h3>Kapal Berlayar</h3>
+        </div>
+        <div class="card-wisata">
+          <img
+            src="https://d.rapidcdn.app/snapinsta?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3Njb250ZW50LWFtczQtMS5jZG5pbnN0YWdyYW0uY29tL3YvdDUxLjI5MzUwLTE1LzI2MDAxNjk4MF82NjEwNTY1NzUxMDk5MDdfMzQwNTYyOTQ1Mjk2ODU3OTdfbi53ZWJwP3N0cD1kc3QtanBnX2UzNV9zNjQweDY0MF9zaDAuMDhfdHQ2JmVmZz1leUoyWlc1amIyUmxYM1JoWnlJNkltbHRZV2RsWDNWeWJHZGxiaTR4TURnd2VERXdPREF1YzJSeUxtWXlPVE0xTUM1a1pXWmhkV3gwWDJsdFlXZGxJbjAmX25jX2h0PXNjb250ZW50LWFtczQtMS5jZG5pbnN0YWdyYW0uY29tJl9uY19jYXQ9MTA3Jl9uY19vYz1RNmNaMkFGd2tIbEZYOVR3MVFaWkd6a21wS3VkeHl0ZHlabW1PZEdpamEyZ0VSendXa29HeEFEWE1KLTVtR3Y3eFQzYmRUOCZfbmNfb2hjPWt0bHNONjVoUU1ZUTdrTnZnRjJSdFhlJl9uY19naWQ9MDlmNjhkM2NmNmM0NDdjOWI0ZmI4MzQ2YzkzNjJhZjAmZWRtPUFQczE3Q1VCQUFBQSZjY2I9Ny01Jm9oPTAwX0FZRExQLU84SUsyLWlTaWNBWm5qa2RQeU92Yi1ucFBHR1dFZ1hMendhRE5qWUEmb2U9NjdCRTZGNTUmX25jX3NpZD0xMGQxM2IiLCJmaWxlbmFtZSI6IlNuYXBpbnN0LmFwcF90aHVtYl8yNjAwMTY5ODBfNjYxMDU2NTc1MTA5OTA3XzM0MDU2Mjk0NTI5Njg1Nzk3X24ud2VicCJ9.Q8NwQFHI1yCK7P93RG_ymfnlO3LkxFlUtY7yD5_yFJI"
+            alt="Pulau Terpencil"
+            data-caption="Dikunjungi oleh adek2 dari Paud dan memberika Kebahagiaan."
+            onclick="openModal(this)"
+          />
+          <h3>Bawa Kebahagiaan</h3>
+        </div>
+        <div class="card-wisata">
+          <img
+            src="https://d.rapidcdn.app/snapinsta?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3Njb250ZW50LWF0bDMtMi5jZG5pbnN0YWdyYW0uY29tL3YvdDUxLjI5MzUwLTE1LzI4OTcwNjgzMl8xMTYxNjE4MjU4MDExMTcxXzgxNzQ0MDYzMDE2OTQ1NTAxNzdfbi53ZWJwP3N0cD1kc3QtanBnX2UzNV9zNjQweDY0MF9zaDAuMDhfdHQ2JmVmZz1leUoyWlc1amIyUmxYM1JoWnlJNkltbHRZV2RsWDNWeWJHZGxiaTR4TURnd2VEY3lNQzV6WkhJdVpqSTVNelV3TG1SbFptRjFiSFJmYVcxaFoyVWlmUSZfbmNfaHQ9c2NvbnRlbnQtYXRsMy0yLmNkbmluc3RhZ3JhbS5jb20mX25jX2NhdD0xMTEmX25jX29jPVE2Y1oyQUhtYmotNi1yeDNKdUdPVmU3dkhRVjloM0o1bDNQTld6THotaV92TnhJa2lpSkluM0Y1WUZzSVBIbmF1dXA3NWpvJl9uY19vaGM9SmpYVHA4VjlVZ3dRN2tOdmdFR1RteUEmX25jX2dpZD1jY2M5M2U2MzdkZmI0ODc4YjliYjMzYzk0ZjA0MGMxNSZlZG09QVBzMTdDVUJBQUFBJmNjYj03LTUmb2g9MDBfQVlDcEhqakJWQlBySk5rS1V0enBVWkFpd3hVS3I2MDBGYm9QWHN2NU1iSHdPZyZvZT02N0JFNkI2OCZfbmNfc2lkPTEwZDEzYiIsImZpbGVuYW1lIjoiU25hcGluc3QuYXBwX3RodW1iXzI4OTcwNjgzMl8xMTYxNjE4MjU4MDExMTcxXzgxNzQ0MDYzMDE2OTQ1NTAxNzdfbi53ZWJwIn0.4XmoGY6dXtzwrsYYgvE4bi986Vti_5RaqtYFT9wpgFU"
+            alt="Kota Bersejarah"
+            data-caption="Saksikan Senja dan nikmati suasanaya."
+            onclick="openModal(this)"
+          />
+          <h3>Senjakuu</h3>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="calendar-times">
+        <h1><i class="far fa-calendar-alt"></i> Jam Operasional Kami</h1>
+        <p class="deskripsi">Kami buka setiap hari untuk melayani Anda!</p>
+
+        <div class="jadwal">
+          <table>
+            <thead>
+              <tr>
+                <th>Hari</th>
+                <th>Jam Buka</th>
+                <th>Jam Tutup</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Senin</td>
+                <td><time datetime="Mo06:00">06:00</time></td>
+                <td><time datetime="Mo18:00">18:00</time></td>
+              </tr>
+              <tr>
+                <td>Selasa</td>
+                <td><time datetime="Tu06:00">06:00</time></td>
+                <td><time datetime="Tu18:00">18:00</time></td>
+              </tr>
+              <tr>
+                <td>Rabu</td>
+                <td><time datetime="We06:00">06:00</time></td>
+                <td><time datetime="We18:00">18:00</time></td>
+              </tr>
+              <tr>
+                <td>Kamis</td>
+                <td><time datetime="Th06:00">06:00</time></td>
+                <td><time datetime="Th18:00">18:00</time></td>
+              </tr>
+              <tr>
+                <td>Jumat</td>
+                <td><time datetime="Fr06:00">06:00</time></td>
+                <td><time datetime="Fr18:00">18:00</time></td>
+              </tr>
+              <tr>
+                <td>Sabtu</td>
+                <td><time datetime="Sa06:00">06:00</time></td>
+                <td><time datetime="Sa18:00">18:00</time></td>
+              </tr>
+              <tr>
+                <td>Minggu</td>
+                <td><time datetime="Su06:00">06:00</time></td>
+                <td><time datetime="Su18:00">18:00</time></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="catatan">
+          <i class="fas fa-info-circle"></i> Jam operasional dapat berubah
+          sewaktu-waktu. Silakan hubungi kami untuk informasi lebih lanjut.
+        </p>
+      </div>
+    </section>
+
+    <section id="tentang-kami" class="tentang-kami animate-element">
+      <h2>Tentang Kami</h2>
+      <div class="tentang-kami-content">
+        <div class="tentang-kami-text">
+          <p>
+            Liburan Keluarga Anti Ribet? Dana Aur Jawabannya! Terletak di tepi jalan, 40 menit saja dari Lubuklinggau, danau ini menawarkan sarana rekreasi lengkap. Shelter nyaman, rumah makan unik, wahana air seru, dan tempat memancing tenang tersedia. Kami hadir untuk memastikan liburan Anda lancar, menyenangkan, dan tak terlupakan. Dana Aur: Destinasi mudah, kenangan abadi.
+          </p>
+          <p>
+            Kisah Seru di Tepi Danau, Dana Aur Menanti Keluarga Anda! Dahulu, danau ini hanyalah tempat peristirahatan sederhana. Kini, Dana Aur telah bertransformasi menjadi destinasi wisata keluarga impian. Gazebo cantik, rumah makan terapung unik, bebek air lucu, dan spot memancing tenang hadir untuk melengkapi liburan Anda. Datang dan jadilah bagian dari cerita indah Dana Aur!
+          </p>
+        </div>
+        <div class="tentang-kami-image">
+          <img
+            src="https://giwang.sumselprov.go.id/api/uploads/destinations/destination_168657607813118.jpeg"
+            alt="Tentang Kami"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="pelayanan-terbaik" class="pelayanan-terbaik animate-element">
+      <h2>Pelayanan Terbaik Kami</h2>
+      <div class="list-pelayanan">
+        <div class="card-pelayanan">
+          <i class="fas fa-hand-holding-heart"></i>
+          <h3>Pelayanan Personal</h3>
+          <p>
+            Kami memberikan pelayanan yang personal dan perhatian penuh kepada
+            setiap pelanggan. Kebutuhan Anda adalah prioritas kami.
+          </p>
+        </div>
+        <div class="card-pelayanan">
+          <i class="fas fa-route"></i>
+          <h3>Rencana Perjalanan Fleksibel</h3>
+          <p>
+            Rencanakan perjalanan Anda sesuai keinginan. Kami siap membantu
+            menyesuaikan itinerary agar liburan Anda sempurna.
+          </p>
+        </div>
+        <div class="card-pelayanan">
+          <i class="fas fa-headphones-alt"></i>
+          <h3>Dukungan 24/7</h3>
+          <p>
+            Tim dukungan kami siap membantu Anda 24 jam sehari, 7 hari seminggu.
+            Kami hadir untuk memastikan perjalanan Anda lancar dan aman.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ulasan"class="ulasan">
+      <h2>Ulasan Pengunjung</h2>
+      <div class="slider-container">
+        <button class="scroll-btn prev-btn">←</button>
+        <button class="scroll-btn next-btn">→</button>
+
+        <div class="list-ulasan">
+          <div class="card-ulasan">
+            <div class="rating">★★★★★</div>
+            <p class="review-text">
+              "Tempat yang bagus untuk liburan bersama keluarga. Bersih, rapi
+              dan menarik. Enak bersantai sore-sore. Pemandangan indah
+              menakjubkan."
+            </p>
+            <p class="nama-ulasan">- Swarman Siahaan</p>
+          </div>
+
+          <div class="card-ulasan">
+            <div class="rating">★★★★☆</div>
+            <p class="review-text">
+              "Tempat yang cocok untuk berburu sunset. Nice Place to hangout
+              especially in afternoon. Cocok dijadikan destinasi wisata akhir
+              pekan bersama keluarga."
+            </p>
+            <p class="nama-ulasan">- Sasika Khairunnisa</p>
+          </div>
+
+          <div class="card-ulasan">
+            <div class="rating">★★★★★</div>
+            <p class="review-text">
+              "Mengayuh sepeda air di danau aur sangat mengasyikan. Perawatan
+              dan pengelolaan lokasi diharapkan dapat ditingkatkan, ada musholla
+              jadi nyaman kalo mau sholat."
+            </p>
+            <p class="nama-ulasan">- Meria Fitriani</p>
+          </div>
+
+          <div class="card-ulasan">
+            <div class="rating">★★★★☆</div>
+            <p class="review-text">
+              "Tempat rekreasi nyaman dan bersih. Di perbanyak lagi yaa tempat
+              rekreasi ya... Biar pulang kampung bisa betah, karena enak ada
+              tempat jalan2nya."
+            </p>
+            <p class="nama-ulasan">- Cindy Tyara</p>
+          </div>
+
+          <div class="card-ulasan">
+            <div class="rating">★★★★★</div>
+            <p class="review-text">
+              "Danau aur sangat cocok untuk mengajak keluarga berlibur.
+              Tempatnya sudah lumayan bagus, akses menuju kesana jalannya bagus,
+              tempatnya strategis."
+            </p>
+            <p class="nama-ulasan">- Drs Anhar</p>
+          </div>
+
+          <div class="card-ulasan">
+            <div class="rating">★★★★☆</div>
+            <p class="review-text">
+              "Udah lama pengen ke sini. Alhamdulillah akhirnya kesampaian juga.
+              Tempatnya bagus dan adem, apalagi pas naik perahu, vibesnya luar
+              biasa."
+            </p>
+            <p class="nama-ulasan">- Inagrafis</p>
+          </div>
+
+          <div class="card-ulasan">
+            <div class="rating">★★★★★</div>
+            <p class="review-text">
+              "Tempatnya keren gk kalah menarik ini sebelum di renov pas tahun
+              2023 Desember. Banyak spot foto yang instagramable dan tempat
+              bermain anak."
+            </p>
+            <p class="nama-ulasan">- Bagas Saputra</p>
+          </div>
+
+          
+          
+        </div>
+      </div>
+</div>
+</div>
+      <div class="pagination"></div>
+    </section>
+
+    <footer id="footer" class="footer animate-element">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Detail Destination</h3>
+          <p>
+            Danau Aur memiliki luas ± 40 Ha merupakan destinasi wisata alam berupa danau yang terletak di Desa Sumberharta Kecamata Sumber Harta. Jarak destinasi wisata ini kurang lebih 30 menit dari Ibu kota Musi Rawas, Muara Beliti. Jalan menuju Danau Aur cukup baik, sudah beraspal dan lokasi danau terletak dipinggir jalan raya  sehingga memudahkan wisatawan untuk berkunjung ke destinasi wisata ini.
+Di destinasi wisata ini pengunjung bisa menikmati keberadaan belasan rumah makan terapung yang siap mengantarkan pengunjung berkeliling menikmati pemandangan Danau Aur. Pengembangan wisata Danau Aur telah didukung oleh beberapa fasilitas yaitu Pusat Kios Cinderamata, musholla, toilet, tempat makan, gazebo, wahana air, tempat pemancingan dan lain-lain.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Kontak Kami</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Alamat: WW2G+776, Sumber Jaya,
+            Kec. Sumber Harta, Kabupaten Musi Rawas, Sumatera Selatan 31653
+          </p>
+          <p><i class="fas fa-phone"></i> Telepon: 0812-3456-7890</p>
+          <p><i class="fas fa-envelope"></i> Email: info@DanaAurMusirawas.com</p>
+        </div>
+        <div class="footer-section">
+          <h3>Lokasi Kami</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.634697253985!2d103.18585457479876!3d-3.246574996788378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e39df0b5d4c172f%3A0x945a9c1148f95215!2sSumber%20Jaya%2C%20Sumber%20Harta%2C%20Musi%20Rawas%20Regency%2C%20South%20Sumatra!5e0!3m2!1sen!2sid!4v1708988589524!5m2!1sen!2sid"
+            width="100%"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Bswaa. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/NOMOR_WHATSAPP_ANDA?text=Halo,%20saya%20tertarik%20untuk%20memesan%20paket%20wisata%20Anda."
+      id="pesan-sekarang"
+      class="floating-whatsapp"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i> Pesan Sekarang
+    </a>
+
+    <!-- Modal Detail Gambar -->
+    <div id="gambarModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">×</span>
+        <img id="modalGambar" src="" alt="Detail Wisata" />
+        <div id="modalCaption"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

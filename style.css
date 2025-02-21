@@ -1,0 +1,1032 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Warna Utama - Lebih Profesional */
+:root {
+  --primary-color: #1e8449; /* Hijau Emerald */
+  --secondary-color: #ffc107; /* Kuning Emas */
+  --accent-color: #3498db; /* Biru Cerah */
+  --text-color: #2d3436; /* Abu-abu Gelap */
+  --bg-color: #ffffff; /* Putih */
+  --light-bg-color: #f8f9fa; /* Abu-abu Sangat Muda untuk latar belakang section */
+  --shadow-color: rgba(0, 0, 0, 0.12); /* Shadow lebih halus */
+  --border-color: #e0e0e0; /* Warna border lebih lembut */
+}
+
+body {
+  background-color: var(
+    --light-bg-color
+  ); /* Latar belakang body lebih terang */
+}
+
+/* Header */
+header {
+  background-color: var(--bg-color);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px var(--shadow-color); /* Shadow lebih tegas */
+  position: sticky; /* Sticky header */
+  top: 0;
+  z-index: 100;
+  transition: box-shadow 0.3s ease; /* Animasi shadow saat scroll */
+}
+
+header.shadow-on-scroll {
+  box-shadow: 0 4px 12px var(--shadow-color); /* Shadow lebih besar saat scroll */
+}
+
+.logo {
+  font-size: 2em; /* Logo lebih besar */
+  font-weight: 700;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+.logo:hover {
+  color: var(--accent-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 30px; /* Spasi menu lebih lebar */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 8px 12px; /* Padding link navigasi */
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+  background-color: var(--light-bg-color); /* Efek hover background */
+}
+
+.btn-pesan {
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 12px 25px; /* Tombol pesan lebih besar */
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-pesan:hover {
+  background-color: #196f3d; /* Warna hover lebih gelap */
+  transform: translateY(-2px); /* Efek hover sedikit naik */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8em; /* Hamburger lebih besar */
+  color: var(--text-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.hamburger:hover {
+  color: var(--primary-color);
+}
+
+/* Sidebar - Styling Lebih Profesional */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -320px; /* Lebar sidebar sedikit lebih besar */
+  width: 320px;
+  height: 100%;
+  background-color: var(--bg-color);
+  box-shadow: -3px 0 10px var(--shadow-color); /* Shadow lebih kuat */
+  padding: 30px; /* Padding lebih besar */
+  transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Animasi cubic-bezier untuk lebih smooth */
+  z-index: 101;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px; /* Margin bottom lebih besar */
+}
+
+.logo-sidebar {
+  font-size: 2em; /* Logo sidebar lebih besar */
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.close-sidebar {
+  font-size: 1.8em; /* Close icon lebih besar */
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+.close-sidebar:hover {
+  color: var(--secondary-color);
+}
+
+.sidebar-nav ul {
+  list-style: none;
+}
+
+.sidebar-nav ul li {
+  margin-bottom: 20px; /* Margin bottom menu sidebar lebih besar */
+}
+
+.sidebar-nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 12px 20px; /* Padding link sidebar lebih besar */
+  border-radius: 8px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar-nav ul li a:hover {
+  color: var(--primary-color);
+  background-color: var(--light-bg-color); /* Efek hover background */
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px 30px; /* Padding hero lebih besar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
+  margin-bottom: 40px; /* Margin bottom lebih besar */
+  border-radius: 8px; /* Border radius section */
+  overflow: hidden; /* Untuk border radius pada gambar */
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 40px; /* Padding kanan content */
+}
+
+.hero-content h1 {
+  font-size: 3em; /* Judul hero lebih besar */
+  margin-bottom: 25px; /* Margin bottom judul */
+  color: var(--text-color);
+  line-height: 1.2; /* Line height judul */
+}
+
+.hero-content p {
+  font-size: 1.2em; /* Paragraf hero lebih besar */
+  color: #555; /* Warna teks lebih lembut */
+  margin-bottom: 40px; /* Margin bottom paragraf */
+  font-weight: 400;
+}
+
+.btn-hero {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--text-color); /* Warna teks tombol hero disesuaikan */
+  padding: 18px 35px; /* Tombol hero lebih besar */
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-hero i {
+  margin-left: 12px;
+}
+
+.btn-hero:hover {
+  background-color: #e6b800; /* Warna hover lebih gelap */
+  transform: translateY(-3px); /* Efek hover lebih naik */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  color: var(--bg-color); /* Warna teks hover */
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 8px; /* Border radius gambar hero */
+  box-shadow: 8px 8px 20px var(--shadow-color); /* Shadow gambar lebih kuat */
+  transition: transform 0.5s ease; /* Animasi gambar hero */
+}
+.hero-image img:hover {
+  transform: scale(1.03); /* Efek zoom gambar hero saat hover */
+}
+
+/* Wisata Section */
+.wisata {
+  padding: 80px 30px;
+  background-color: var(
+    --light-bg-color
+  ); /* Warna latar belakang section lebih terang */
+  box-shadow: 0 2px 5px var(--shadow-color);
+  margin-bottom: 40px; /* Margin bottom lebih besar */
+  text-align: center;
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.wisata h2 {
+  font-size: 2.5em; /* Judul section lebih besar */
+  margin-bottom: 50px; /* Margin bottom judul */
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.list-wisata {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(320px, 1fr)
+  ); /* Lebar card wisata sedikit lebih besar */
+  gap: 35px; /* Gap antar card lebih besar */
+}
+
+.card-wisata {
+  border-radius: 12px; /* Border radius card wisata lebih besar */
+  overflow: hidden;
+  box-shadow: 6px 6px 18px var(--shadow-color); /* Shadow card lebih kuat */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Cursor pointer untuk indikasi interaktif */
+}
+
+.card-wisata:hover {
+  transform: scale(1.04); /* Efek hover lebih besar */
+  box-shadow: 9px 9px 22px var(--shadow-color); /* Shadow hover lebih kuat */
+}
+
+.card-wisata img {
+  width: 100%;
+  height: 240px; /* Tinggi gambar wisata lebih besar */
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Animasi gambar di dalam card */
+}
+
+.card-wisata img.active-image {
+  transform: scale(1.1); /* Efek zoom gambar saat aktif (diklik) */
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efek animasi lebih dinamis */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow saat aktif */
+  z-index: 2; /* Pastikan gambar aktif di atas elemen lain */
+}
+
+.card-wisata h3 {
+  padding: 25px; /* Padding judul card wisata lebih besar */
+  text-align: center;
+  background-color: white;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+/* Tentang Kami Section */
+.tentang-kami {
+  padding: 80px 30px;
+  background-color: var(--light-bg-color);
+  box-shadow: 0 2px 5px var(--shadow-color);
+  margin-bottom: 40px;
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.tentang-kami h2 {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  text-align: center;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.tentang-kami-content {
+  display: flex;
+  align-items: center;
+  gap: 60px; /* Gap content lebih besar */
+}
+
+.tentang-kami-text {
+  flex: 1;
+}
+
+.tentang-kami-text p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 25px; /* Margin bottom paragraf lebih besar */
+  font-weight: 400;
+}
+
+.tentang-kami-image {
+  flex: 1;
+  max-width: 45%;
+}
+
+.tentang-kami-image img {
+  width: 100%;
+  border-radius: 12px; /* Border radius gambar tentang kami lebih besar */
+  box-shadow: 8px 8px 20px var(--shadow-color);
+  transition: transform 0.5s ease;
+}
+.tentang-kami-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Pelayanan Terbaik Section */
+.pelayanan-terbaik {
+  padding: 80px 30px;
+  background-color: var(--light-bg-color);
+  box-shadow: 0 2px 5px var(--shadow-color);
+  margin-bottom: 40px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.pelayanan-terbaik h2 {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.list-pelayanan {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+}
+
+.card-pelayanan {
+  background-color: white;
+  padding: 40px 30px; /* Padding card pelayanan lebih besar */
+  border-radius: 12px;
+  box-shadow: 6px 6px 18px var(--shadow-color);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-pelayanan:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 22px var(--shadow-color);
+}
+
+/* Reset CSS (sama seperti sebelumnya) */
+/* Warna Utama (sama seperti sebelumnya) */
+/* Body (sama seperti sebelumnya) */
+/* Header (sama seperti sebelumnya) */
+/* Logo (sama seperti sebelumnya) */
+/* Nav (sama seperti sebelumnya) */
+/* Button Pesan (sama seperti sebelumnya) */
+/* Hamburger (sama seperti sebelumnya) */
+
+/* Sidebar - Styling Lebih Detail */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 320px;
+  height: 100%;
+  background-color: var(--bg-color);
+  box-shadow: -3px 0 10px var(--shadow-color);
+  padding: 30px;
+  transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 101;
+  display: flex; /* Menggunakan Flexbox untuk layout sidebar */
+  flex-direction: column; /* Item sidebar vertikal */
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px; /* Sedikit mengurangi margin header */
+}
+
+.logo-sidebar {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.close-sidebar {
+  font-size: 1.8em;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.close-sidebar:hover {
+  color: var(--secondary-color);
+}
+
+.sidebar-divider {
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+  margin: 20px 0; /* Margin divider */
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* Sidebar-nav mengisi sisa ruang */
+  display: flex;
+  flex-direction: column; /* Item navigasi vertikal */
+  justify-content: flex-start; /* Atur item dari atas */
+}
+
+.sidebar-nav li {
+  margin-bottom: 10px; /* Mengurangi margin antar link */
+}
+
+.sidebar-nav li a {
+  display: flex; /* Menggunakan Flexbox untuk icon dan text */
+  align-items: center; /* Vertically center icon dan text */
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar-nav li a:hover {
+  color: var(--primary-color);
+  background-color: var(--light-bg-color);
+}
+
+.icon-sidebar {
+  margin-right: 15px; /* Jarak antara icon dan text */
+  font-size: 1.2em; /* Ukuran icon sidebar */
+  color: var(--accent-color); /* Warna icon sidebar */
+}
+
+.btn-pesan-sidebar {
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Tengahin text di button */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 15px; /* Spasi dari list navigasi atas */
+}
+
+.btn-pesan-sidebar:hover {
+  background-color: #196f3d;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-footer {
+  text-align: center;
+  margin-top: 20px; /* Margin top footer sidebar */
+  color: #777;
+  font-size: 0.9em;
+}
+.calander-times {
+  display: flex;
+  justify-content: center; /* Memusatkan secara horizontal */
+  align-items: center; /* Memusatkan secara vertikal */
+  min-height: 100vh;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+}
+.deskripsi {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.jadwal table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto 20px; /* Menambahkan margin auto untuk memusatkan tabel */
+  text-align: left; /* Mengembalikan teks ke rata kiri di dalam tabel */
+}
+
+.jadwal th,
+.jadwal td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.jadwal th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.jadwal tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.catatan {
+  color: #555;
+  font-size: 0.9em;
+}
+
+.catatan i {
+  margin-right: 5px;
+  color: #dc3545; /* Warna merah untuk ikon */
+}
+/* Modal Detail Gambar - Styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 102; /* Sit on top - higher than sidebar */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+  transition: opacity 0.3s ease-out; /* Animasi fade-in */
+  opacity: 0; /* Start with opacity 0 for animation */
+  visibility: hidden; /* Start as hidden */
+  &.show {
+    display: flex; /* Menggunakan flexbox untuk centering modal */
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Fade in */
+    visibility: visible; /* Make visible */
+  }
+}
+
+.modal-content {
+  background-color: var(--bg-color);
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+  position: relative; /* Untuk positioning close button */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  max-height: 90vh; /* Maximum height relative to viewport */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+.close-modal {
+  color: #aaa;
+  position: absolute; /* Positioned inside modal-content */
+  top: 10px;
+  right: 20px;
+  font-size: 2.5em; /* Ukuran close button */
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modalGambar {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block; /* Remove bottom gap in some browsers */
+  margin-bottom: 20px; /* Spasi bawah gambar di modal */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#modalCaption {
+  text-align: center;
+  padding: 10px;
+  color: #555;
+  font-style: italic;
+}
+
+/* Responsive Design (sama seperti sebelumnya) */
+
+.card-pelayanan i {
+  font-size: 2.5em; /* Icon pelayanan lebih besar */
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.card-pelayanan h3 {
+  font-size: 1.4em; /* Judul pelayanan lebih besar */
+  margin-bottom: 15px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.card-pelayanan p {
+  color: #666;
+  font-weight: 400;
+}
+
+/* Ulasan Section */
+.ulasan {
+  padding: 80px 30px;
+  background-color: var(--light-bg-color);
+  box-shadow: 0 2px 5px var(--shadow-color);
+  margin-bottom: 40px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.ulasan h2 {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.list-ulasan {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(380px, 1fr)
+  ); /* Card ulasan lebih lebar */
+  gap: 35px; /* Gap ulasan lebih besar */
+}
+
+.card-ulasan {
+  background-color: white;
+  padding: 40px; /* Padding card ulasan lebih besar */
+  border-radius: 12px; /* Border radius ulasan lebih besar */
+  box-shadow: 6px 6px 18px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-ulasan:hover {
+  transform: translateY(-3px);
+  box-shadow: 8px 8px 22px var(--shadow-color);
+}
+
+.rating {
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  font-size: 1.1em; /* Rating stars lebih besar */
+}
+
+.rating i {
+  margin-right: 4px;
+}
+
+.card-ulasan p {
+  margin-bottom: 30px; /* Margin bottom paragraf ulasan lebih besar */
+  color: #555;
+  font-size: 1.1em; /* Font size ulasan lebih besar */
+  line-height: 1.7; /* Line height ulasan */
+}
+
+.nama-ulasan {
+  font-weight: 600;
+  text-align: right;
+  color: var(--text-color);
+  font-style: italic; /* Nama ulasan italic */
+}
+
+/* Footer */
+footer {
+  background-color: rgb(212, 236, 203); /* Latar belakang footer lebih terang */
+  padding: 80px 30px;
+  box-shadow: 0 -2px 8px var(--shadow-color);
+  border-top: 1px solid var(--border-color); /* Border top footer */
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(320px, 1fr)
+  ); /* Section footer lebih lebar */
+  gap: 40px; /* Gap footer section lebih besar */
+  margin-bottom: 40px; /* Margin bottom footer content */
+}
+
+.footer-section h3 {
+  font-size: 1.6em; /* Judul footer section lebih besar */
+  margin-bottom: 25px; /* Margin bottom judul footer */
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.footer-section p {
+  color: #777;
+  margin-bottom: 20px; /* Margin bottom paragraf footer */
+  font-weight: 400;
+}
+
+.footer-section iframe {
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px var(--shadow-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px; /* Padding top footer bottom */
+  border-top: 1px solid var(--border-color);
+  color: #777;
+  font-weight: 400;
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 25px; /* Tombol WA lebih besar */
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 4px 4px 12px var(--shadow-color); /* Shadow tombol WA lebih kuat */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 99;
+}
+
+.floating-whatsapp i {
+  font-size: 1.6em; /* Icon WA lebih besar */
+  margin-right: 12px;
+}
+
+.floating-whatsapp:hover {
+  background-color: #196f3d;
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px var(--shadow-color);
+}
+
+/* Animasi Muncul */
+.animate-element {
+  opacity: 0;
+  transform: translateY(30px); /* Transform Y lebih jauh */
+  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 1s cubic-bezier(0.165, 0.84, 0.44, 1); /* Animasi cubic-bezier lebih smooth */
+}
+
+.animate-element.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animasi Scroll Navigasi */
+html {
+  scroll-padding-top: 80px; /* Sesuaikan dengan tinggi header */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+  .hero-content h1 {
+    font-size: 2.2em;
+  }
+  .hero-image {
+    max-width: 90%;
+  }
+  .tentang-kami-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .tentang-kami-image {
+    max-width: 90%;
+    margin-top: 30px;
+  }
+  .wisata,
+  .tentang-kami,
+  .pelayanan-terbaik,
+  .ulasan,
+  footer {
+    padding: 60px 20px;
+  }
+  .wisata h2,
+  .tentang-kami h2,
+  .pelayanan-terbaik h2,
+  .ulasan h2 {
+    font-size: 2.2em;
+  }
+  .list-wisata {
+    grid-template-columns: 1fr;
+  }
+  .list-ulasan {
+    grid-template-columns: 1fr;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  .card-ulasan p {
+    font-size: 1em;
+  }
+  .card-ulasan .nama-ulasan {
+    font-size: 0.95em;
+  }
+  .floating-whatsapp {
+    right: 20px;
+    bottom: 20px;
+    padding: 15px 20px;
+  }
+  .floating-whatsapp i {
+    font-size: 1.4em;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 60px 15px;
+  }
+  .hero-content h1 {
+    font-size: 1.8em;
+  }
+  .hero-content p {
+    font-size: 0.95em;
+  }
+  .wisata,
+  .tentang-kami,
+  .pelayanan-terbaik,
+  .ulasan,
+  footer {
+    padding: 40px 15px;
+  }
+  .wisata h2,
+  .tentang-kami h2,
+  .pelayanan-terbaik h2,
+  .ulasan h2 {
+    font-size: 1.8em;
+  }
+  .card-wisata h3 {
+    font-size: 1em;
+    padding: 15px;
+  }
+  .card-ulasan p {
+    font-size: 0.9em;
+  }
+  .card-ulasan .nama-ulasan {
+    font-size: 0.85em;
+  }
+}
+/* Style untuk section ulasan */
+.ulasan {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.list-ulasan {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.5s ease;
+  cursor: grab;
+}
+
+.card-ulasan {
+  flex: 0 0 300px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-ulasan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.rating {
+  color: #ffd700;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.review-text {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.nama-ulasan {
+  font-style: italic;
+  color: #666;
+  font-weight: 500;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-btn:hover {
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #666;
+  transform: scale(1.3);
+}
