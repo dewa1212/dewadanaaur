@@ -263,9 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function getPositionX(event) {
-    return event.type.includes("mouse")
-      ? event.pageX
-      : event.touches[0].clientX;
+    return event.type.includes("mouse") ? event.pageX : event.touches[0].clientX;
   }
 
   function animation() {
