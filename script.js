@@ -120,25 +120,12 @@ document.addEventListener("DOMContentLoaded", function () {
       return; // Hentikan fungsi jika elemen modal tidak ditemukan
     }
 
-    const screenWidth = window.innerWidth;
-    const mobileBreakpoint = 768; // Misalnya, breakpoint 768px untuk mobile
+    // **MODIFIED: Display image and caption on all devices**
+    console.log("Modal mode: Displaying image and caption for all devices"); // Debugging log
+    modalImg.src = imgElement.src; // Tampilkan gambar
+    modalImg.style.display = "block"; // Ensure image is displayed
+    captionText.innerHTML = imgElement.dataset.caption;
 
-    console.log("Screen Width:", screenWidth); // DEBUG: Check screen width
-    console.log("Mobile Breakpoint:", mobileBreakpoint); // DEBUG: Check breakpoint
-
-    if (screenWidth > mobileBreakpoint) {
-      // Tampilan Desktop: Tampilkan gambar dan caption
-      console.log("Modal mode: Desktop (image and caption) - Condition TRUE"); // DEBUG
-      console.log("Setting modalImg.src to:", imgElement.src); // DEBUG: Check image source
-      modalImg.src = imgElement.src; // Tampilkan gambar
-      modalImg.style.display = "block"; // Pastikan gambar ditampilkan (jika sebelumnya di-hide di CSS)
-      captionText.innerHTML = imgElement.dataset.caption;
-    } else {
-      // Tampilan Handphone: Tampilkan hanya caption
-      console.log("Modal mode: Mobile (caption only) - Condition FALSE"); // DEBUG
-      modalImg.style.display = "none"; // Sembunyikan gambar di modal untuk mobile
-      captionText.innerHTML = imgElement.dataset.caption;
-    }
 
     // Tampilkan modal (tanpa animasi untuk contoh sederhana)
     modal.style.display = "flex";
