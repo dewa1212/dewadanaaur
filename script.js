@@ -35,7 +35,21 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+function openModal(imgElement) {
+    console.log("openModal function called"); // Tambahkan ini
+    modal.classList.add("show");
+    modalImg.src = imgElement.src;
+    captionText.innerHTML = imgElement.dataset.caption;
+    document.body.style.overflow = "hidden";
+    console.log("Modal should be shown now"); // Tambahkan ini
+}
 
+function closeModal() {
+    console.log("closeModal function called"); // Tambahkan ini
+    modal.classList.remove("show");
+    document.body.style.overflow = "auto";
+    console.log("Modal should be hidden now"); // Tambahkan ini
+}
   checkAnimate();
   window.addEventListener("scroll", checkAnimate);
 
