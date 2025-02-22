@@ -123,19 +123,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const screenWidth = window.innerWidth;
     const mobileBreakpoint = 768; // Misalnya, breakpoint 768px untuk mobile
 
-    console.log("Screen Width:", screenWidth); // DEBUG: Check screen width
-    console.log("Mobile Breakpoint:", mobileBreakpoint); // DEBUG: Check breakpoint
-
     if (screenWidth > mobileBreakpoint) {
       // Tampilan Desktop: Tampilkan gambar dan caption
-      console.log("Modal mode: Desktop (image and caption) - Condition TRUE"); // DEBUG
-      console.log("Setting modalImg.src to:", imgElement.src); // DEBUG: Check image source
+      console.log("Modal mode: Desktop (image and caption)");
       modalImg.src = imgElement.src; // Tampilkan gambar
       modalImg.style.display = "block"; // Pastikan gambar ditampilkan (jika sebelumnya di-hide di CSS)
       captionText.innerHTML = imgElement.dataset.caption;
     } else {
       // Tampilan Handphone: Tampilkan hanya caption
-      console.log("Modal mode: Mobile (caption only) - Condition FALSE"); // DEBUG
+      console.log("Modal mode: Mobile (caption only)");
       modalImg.style.display = "none"; // Sembunyikan gambar di modal untuk mobile
       captionText.innerHTML = imgElement.dataset.caption;
     }
@@ -144,10 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "flex";
     modal.style.opacity = "1";
     modal.style.visibility = "visible";
-
-    console.log("Modal display style set to flex:", modal.style.display); // DEBUG: Check modal display
-    console.log("Modal opacity set to 1:", modal.style.opacity);       // DEBUG: Check modal opacity
-    console.log("Modal visibility set to visible:", modal.style.visibility); // DEBUG: Check modal visibility
 
     document.body.style.overflow = "hidden";
     console.log("Modal should be shown now"); // Debugging log
