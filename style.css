@@ -397,15 +397,6 @@ nav ul li a:hover {
   box-shadow: 8px 8px 22px var(--shadow-color);
 }
 
-/* Reset CSS (sama seperti sebelumnya) */
-/* Warna Utama (sama seperti sebelumnya) */
-/* Body (sama seperti sebelumnya) */
-/* Header (sama seperti sebelumnya) */
-/* Logo (sama seperti sebelumnya) */
-/* Nav (sama seperti sebelumnya) */
-/* Button Pesan (sama seperti sebelumnya) */
-/* Hamburger (sama seperti sebelumnya) */
-
 /* Sidebar - Styling Lebih Detail */
 .sidebar {
   position: fixed;
@@ -815,6 +806,76 @@ html {
 }
 
 /* Responsive Design */
+
+@media (max-width: 1024px) {
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+  .hero-content h1 {
+    font-size: 2.2em;
+  }
+  .hero-image {
+    max-width: 90%;
+  }
+  .tentang-kami-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .tentang-kami-image {
+    max-width: 90%;
+    margin-top: 30px;
+  }
+  .wisata,
+  .tentang-kami,
+  .pelayanan-terbaik,
+  .ulasan,
+  footer {
+    padding: 60px 20px;
+  }
+  .wisata h2,
+  .tentang-kami h2,
+  .pelayanan-terbaik h2,
+  .ulasan h2 {
+    font-size: 2.2em;
+  }
+  .list-wisata {
+    grid-template-columns: 1fr;
+  }
+  .list-ulasan {
+    grid-template-columns: 1fr;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  .card-ulasan p {
+    font-size: 1em;
+  }
+  .card-ulasan .nama-ulasan {
+    font-size: 0.95em;
+  }
+  .floating-whatsapp {
+    right: 20px;
+    bottom: 20px;
+    padding: 15px 20px;
+  }
+  .floating-whatsapp i {
+    font-size: 1.4em;
+    margin-right: 8px;
+  }
+}
 @media (max-width: 768px) {
   nav {
     display: none;
@@ -917,6 +978,18 @@ html {
   }
   .card-ulasan .nama-ulasan {
     font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-wisata {
+    flex: 1 1 100%;
+  }
+  .card-ulasan p {
+    font-size: 20px;
+  }
+  .card-ulasan .nama-ulasan {
+    font-size: 20px;
   }
 }
 /* Style untuk section ulasan */
