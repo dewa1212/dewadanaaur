@@ -109,7 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // ULASAN SCRIPT
   // Modal Detail Gambar Functions
   const modal = document.getElementById("gambarModal");
-  const modalImg = document.getElementById("modalGambar"); // Pastikan modalImg dideklarasikan lagi
   const captionText = document.getElementById("modalCaption");
 
   function openModal(imgElement) {
@@ -120,21 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return; // Hentikan fungsi jika elemen modal tidak ditemukan
     }
 
-    const screenWidth = window.innerWidth;
-    const mobileBreakpoint = 768; // Misalnya, breakpoint 768px untuk mobile
-
-    if (screenWidth > mobileBreakpoint) {
-      // Tampilan Desktop: Tampilkan gambar dan caption
-      console.log("Modal mode: Desktop (image and caption)");
-      modalImg.src = imgElement.src; // Tampilkan gambar
-      modalImg.style.display = "block"; // Pastikan gambar ditampilkan (jika sebelumnya di-hide di CSS)
-      captionText.innerHTML = imgElement.dataset.caption;
-    } else {
-      // Tampilan Handphone: Tampilkan hanya caption
-      console.log("Modal mode: Mobile (caption only)");
-      modalImg.style.display = "none"; // Sembunyikan gambar di modal untuk mobile
-      captionText.innerHTML = imgElement.dataset.caption;
-    }
+    // Ambil caption dari data-caption atribut gambar yang diklik
+    captionText.innerHTML = imgElement.dataset.caption;
 
     // Tampilkan modal (tanpa animasi untuk contoh sederhana)
     modal.style.display = "flex";
@@ -142,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.visibility = "visible";
 
     document.body.style.overflow = "hidden";
-    console.log("Modal should be shown now"); // Debugging log
+    console.log("Modal should be shown now (caption only)"); // Debugging log
   }
 
   function closeModal() {
