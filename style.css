@@ -1,3 +1,4 @@
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
@@ -1101,4 +1102,49 @@ h2 {
 .dot.active {
   background: #666;
   transform: scale(1.3);
+}
+
+/* CSS Detail Gambar yang Baru */
+.zoomed {
+  transform: scale(2);
+  transition: transform 0.3s ease-in-out;
+  cursor: zoom-out; /* Mengubah cursor saat di-zoom */
+  position: relative; /* Untuk memastikan efek zoom di dalam container */
+  z-index: 10; /* Menaikkan z-index agar di atas elemen lain */
+}
+.card-wisata img {
+  cursor: zoom-in; /* Mengubah cursor menjadi zoom-in */
+}
+
+#imageModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding-top: 5%; /* Mengurangi padding-top agar modal lebih ke tengah */
+  cursor: pointer; /* Menambahkan cursor pointer pada modal background untuk menutup */
+}
+#modalImage {
+  max-width: 95%; /* Memperbesar gambar modal sedikit */
+  max-height: 90vh; /* Memperbesar tinggi maksimal gambar modal sedikit */
+  border-radius: 8px; /* Menambahkan border radius pada gambar modal */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Menambahkan shadow pada gambar modal */
+}
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px; /* Memperbesar ukuran tombol close */
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease; /* Efek transisi hover untuk tombol close */
+}
+
+.close-modal:hover {
+  color: var(--secondary-color); /* Warna hover tombol close */
 }
