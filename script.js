@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ULASAN SCRIPT
   // Modal Detail Gambar Functions
   const modal = document.getElementById("gambarModal");
+  const modalImg = document.getElementById("modalGambar"); // Pastikan modalImg dideklarasikan lagi
   const captionText = document.getElementById("modalCaption");
 
   function openModal(imgElement) {
@@ -119,16 +120,37 @@ document.addEventListener("DOMContentLoaded", function () {
       return; // Hentikan fungsi jika elemen modal tidak ditemukan
     }
 
-    // Ambil caption dari data-caption atribut gambar yang diklik
-    captionText.innerHTML = imgElement.dataset.caption;
+    const screenWidth = window.innerWidth;
+    const mobileBreakpoint = 768; // Misalnya, breakpoint 768px untuk mobile
+
+    console.log("Screen Width:", screenWidth); // DEBUG: Check screen width
+    console.log("Mobile Breakpoint:", mobileBreakpoint); // DEBUG: Check breakpoint
+
+    if (screenWidth > mobileBreakpoint) {
+      // Tampilan Desktop: Tampilkan gambar dan caption
+      console.log("Modal mode: Desktop (image and caption) - Condition TRUE"); // DEBUG
+      console.log("Setting modalImg.src to:", imgElement.src); // DEBUG: Check image source
+      modalImg.src = imgElement.src; // Tampilkan gambar
+      modalImg.style.display = "block"; // Pastikan gambar ditampilkan (jika sebelumnya di-hide di CSS)
+      captionText.innerHTML = imgElement.dataset.caption;
+    } else {
+      // Tampilan Handphone: Tampilkan hanya caption
+      console.log("Modal mode: Mobile (caption only) - Condition FALSE"); // DEBUG
+      modalImg.style.display = "none"; // Sembunyikan gambar di modal untuk mobile
+      captionText.innerHTML = imgElement.dataset.caption;
+    }
 
     // Tampilkan modal (tanpa animasi untuk contoh sederhana)
     modal.style.display = "flex";
     modal.style.opacity = "1";
     modal.style.visibility = "visible";
 
+    console.log("Modal display style set to flex:", modal.style.display); // DEBUG: Check modal display
+    console.log("Modal opacity set to 1:", modal.style.opacity);       // DEBUG: Check modal opacity
+    console.log("Modal visibility set to visible:", modal.style.visibility); // DEBUG: Check modal visibility
+
     document.body.style.overflow = "hidden";
-    console.log("Modal should be shown now (caption only)"); // Debugging log
+    console.log("Modal should be shown now"); // Debugging log
   }
 
   function closeModal() {
@@ -249,7 +271,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function getPositionX(event) {
-    return event.type.includes("mouse") ? event.pageX : event.touches[0].clientX;
+    return event.type.includes("mouse")
+      ? event.pageX
+      : event.touches[0].clientX;
   }
 
   function animation() {
