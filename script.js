@@ -1,25 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Animasi Sidebar Mobile (sama seperti sebelumnya)
+  // Animasi Sidebar Mobile
   const hamburger = document.querySelector(".hamburger");
   const sidebar = document.querySelector(".sidebar");
   const closeSidebar = document.querySelector(".close-sidebar");
   const sidebarLinks = document.querySelectorAll(".sidebar-nav a");
 
-  hamburger.addEventListener("click", function () {
-    sidebar.classList.add("active");
-  });
+  if (hamburger) { // Tambahkan pengecekan untuk memastikan elemen ada
+    hamburger.addEventListener("click", function () {
+      sidebar.classList.add("active");
+    });
+  }
 
-  closeSidebar.addEventListener("click", function () {
-    sidebar.classList.remove("active");
-  });
-
-  sidebarLinks.forEach((link) => {
-    link.addEventListener("click", function () {
+  if (closeSidebar) { // Tambahkan pengecekan untuk memastikan elemen ada
+    closeSidebar.addEventListener("click", function () {
       sidebar.classList.remove("active");
     });
-  });
+  }
 
-  // Animasi Elemen Muncul saat Scroll dan Page Load (sama seperti sebelumnya)
+  if (sidebarLinks) { // Tambahkan pengecekan untuk memastikan elemen ada
+    sidebarLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        sidebar.classList.remove("active");
+      });
+    });
+  }
+
+  // Animasi Elemen Muncul saat Scroll dan Page Load
   const animateElements = document.querySelectorAll(".animate-element");
 
   function checkAnimate() {
@@ -35,25 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-function openModal(imgElement) {
-    console.log("openModal function called"); // Tambahkan ini
-    modal.classList.add("show");
-    modalImg.src = imgElement.src;
-    captionText.innerHTML = imgElement.dataset.caption;
-    document.body.style.overflow = "hidden";
-    console.log("Modal should be shown now"); // Tambahkan ini
-}
 
-function closeModal() {
-    console.log("closeModal function called"); // Tambahkan ini
-    modal.classList.remove("show");
-    document.body.style.overflow = "auto";
-    console.log("Modal should be hidden now"); // Tambahkan ini
-}
   checkAnimate();
   window.addEventListener("scroll", checkAnimate);
 
-  // Animasi Scroll Header (sama seperti sebelumnya)
+  // Animasi Scroll Header
   const header = document.querySelector("header");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
@@ -63,8 +55,8 @@ function closeModal() {
     }
   });
 
-  // Highlight Active Nav Link saat Scroll (sama seperti sebelumnya)
-  const sections = document.querySelectorAll("section[id]"); // Pilih semua section yang punya ID
+  // Highlight Active Nav Link saat Scroll
+  const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll("header nav ul li a");
 
   function setActiveNavLink() {
@@ -74,68 +66,93 @@ function closeModal() {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
       if (pageYOffset >= sectionTop - sectionHeight / 4) {
-        // Ubah angka 4 untuk menyesuaikan titik aktivasi
         currentSectionId = section.getAttribute("id");
       }
     });
 
     navLinks.forEach((link) => {
-      link.classList.remove("active"); // Hapus kelas 'active' dari semua link
+      link.classList.remove("active");
 
       if (link.getAttribute("href").substring(1) === currentSectionId) {
-        // Bandingkan href dengan ID section
-        link.classList.add("active"); // Tambahkan kelas 'active' ke link yang sesuai
+        link.classList.add("active");
       }
     });
   }
 
   window.addEventListener("scroll", setActiveNavLink);
-  setActiveNavLink(); // Panggil saat halaman pertama kali dimuat untuk set link aktif awal (biasanya 'hero')
+  setActiveNavLink();
 
   // Smooth Scroll Navigation
   const allNavLinks = document.querySelectorAll(
     "header nav ul li a, .sidebar-nav a"
-  ); // Pilih link navigasi di header dan sidebar
+  );
 
   allNavLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
-      e.preventDefault(); // Prevent default jump behavior
+      e.preventDefault();
       const targetId = this.getAttribute("href").substring(1);
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - header.offsetHeight, // Adjust scroll position to account for fixed header
-          behavior: "smooth", // Enable smooth scrolling
+          top: targetElement.offsetTop - header.offsetHeight,
+          behavior: "smooth",
         });
       }
 
-      // Close sidebar menu after navigation on mobile (if sidebar exists)
-      if (sidebar.classList.contains("active")) {
+      if (sidebar && sidebar.classList.contains("active")) { // Tambahkan pengecekan sidebar ada
         sidebar.classList.remove("active");
       }
     });
   });
 });
+
 // ULASAN SCRIPT
-// Modal Detail Gambar Functions (sama seperti sebelumnya)
+// Modal Detail Gambar Functions
 const modal = document.getElementById("gambarModal");
 const modalImg = document.getElementById("modalGambar");
 const captionText = document.getElementById("modalCaption");
 
 function openModal(imgElement) {
-  modal.classList.add("show"); // Menambahkan class 'show' untuk menampilkan modal dengan animasi
+  console.log("openModal function called"); // Debugging log
+
+  if (!modal || !modalImg || !captionText) { // Pengecekan elemen modal ada
+    console.error("Error: Modal elements not found!");
+    return; // Hentikan fungsi jika elemen modal tidak ditemukan
+  }
+
   modalImg.src = imgElement.src;
-  captionText.innerHTML = imgElement.dataset.caption; // Menggunakan dataset untuk caption
-  document.body.style.overflow = "hidden"; // Mencegah scroll body saat modal terbuka
+  captionText.innerHTML = imgElement.dataset.caption;
+
+  // Animasi modal - Coba animasi yang lebih sederhana (atau tanpa animasi untuk testing awal)
+  // modal.classList.add("show"); // Animasi asli
+  modal.style.display = "flex"; // Tampilkan modal tanpa animasi untuk testing
+  modal.style.opacity = "1";      // Pastikan opacity 1 agar terlihat
+  modal.style.visibility = "visible"; // Pastikan visible
+
+  document.body.style.overflow = "hidden";
+  console.log("Modal should be shown now"); // Debugging log
 }
 
 function closeModal() {
-  modal.classList.remove("show"); // Menghapus class 'show' untuk menyembunyikan modal dengan animasi
-  document.body.style.overflow = "auto"; // Mengembalikan scroll body
+  console.log("closeModal function called"); // Debugging log
+
+  if (!modal) { // Pengecekan elemen modal ada
+    console.error("Error: Modal element not found!");
+    return; // Hentikan fungsi jika elemen modal tidak ditemukan
+  }
+
+  // Animasi modal - Sederhanakan atau hilangkan animasi untuk testing
+  // modal.classList.remove("show"); // Animasi asli
+  modal.style.display = "none";  // Sembunyikan modal tanpa animasi untuk testing
+  modal.style.opacity = "0";      // Set opacity 0 untuk animasi fade out (jika nanti ditambahkan)
+  modal.style.visibility = "hidden"; // Set visibility hidden
+
+  document.body.style.overflow = "auto";
+  console.log("Modal should be hidden now"); // Debugging log
 }
 
-// Close modal when clicking outside of modal-content (sama seperti sebelumnya)
+// Close modal when clicking outside of modal-content
 window.addEventListener("click", function (event) {
   if (event.target == modal) {
     closeModal();
@@ -148,7 +165,10 @@ const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
 const pagination = document.querySelector(".pagination");
 
-// Clone first and last slides for infinite loop
+// ... (Bagian kode slider ulasan tidak diubah untuk fokus pada modal) ...
+// (Pastikan kode slider ulasan Anda tetap ada di file script.js yang baru ini)
+
+// Clone first and last slides for infinite loop (tetap ada)
 const firstClone = cards[0].cloneNode(true);
 const lastClone = cards[cards.length - 1].cloneNode(true);
 slider.appendChild(firstClone);
@@ -161,10 +181,10 @@ let prevTranslate = currentTranslate;
 let currentIndex = 0;
 let animationID = 0;
 
-// Set initial position
+// Set initial position (tetap ada)
 slider.style.transform = `translateX(${currentTranslate}px)`;
 
-// Create pagination dots
+// Create pagination dots (tetap ada)
 cards.forEach((_, index) => {
   const dot = document.createElement("div");
   dot.classList.add("dot");
@@ -187,12 +207,12 @@ function updateDots() {
   });
 }
 
-// Touch events
+// Touch events (tetap ada)
 slider.addEventListener("touchstart", touchStart);
 slider.addEventListener("touchmove", touchMove);
 slider.addEventListener("touchend", touchEnd);
 
-// Mouse events
+// Mouse events (tetap ada)
 slider.addEventListener("mousedown", touchStart);
 slider.addEventListener("mousemove", touchMove);
 slider.addEventListener("mouseup", touchEnd);
@@ -254,7 +274,7 @@ function setPositionByIndex() {
   setSliderPosition();
   updateDots();
 
-  // Handle infinite scroll transition
+  // Handle infinite scroll transition (tetap ada)
   if (currentIndex === -1) {
     setTimeout(() => {
       slider.style.transition = "none";
@@ -280,7 +300,7 @@ function setPositionByIndex() {
   }
 }
 
-// Button controls
+// Button controls (tetap ada)
 prevBtn.addEventListener("click", () => {
   currentIndex--;
   if (currentIndex < -1) {
@@ -297,14 +317,14 @@ nextBtn.addEventListener("click", () => {
   setPositionByIndex();
 });
 
-// Prevent context menu on long press
+// Prevent context menu on long press (tetap ada)
 window.oncontextmenu = function (event) {
   event.preventDefault();
   event.stopPropagation();
   return false;
 };
 
-// Handle window resize
+// Handle window resize (tetap ada)
 window.addEventListener("resize", () => {
   setPositionByIndex();
 });
