@@ -1,1 +1,1 @@
-belajar sampe jago
+Sellau Belajar walapun sedikit saja
