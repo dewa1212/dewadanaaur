@@ -120,10 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
       return; // Hentikan fungsi jika elemen modal tidak ditemukan
     }
 
-    // **MODIFIED: Display image and caption on all devices**
-    console.log("Modal mode: Displaying image and caption for all devices"); // Debugging log
+    // **MODIFIED: Display image and caption on all devices - NOW FOR MOBILE TOO!**
+    console.log("Modal mode: Displaying image and caption for ALL devices (including mobile)"); // Debugging log - Clarified message
     modalImg.src = imgElement.src; // Tampilkan gambar
-    modalImg.style.display = "block"; // Ensure image is displayed
+    modalImg.style.display = "block"; // Ensure image is displayed - IMPORTANT for mobile too!
     captionText.innerHTML = imgElement.dataset.caption;
 
 
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Modal visibility set to visible:", modal.style.visibility); // DEBUG: Check modal visibility
 
     document.body.style.overflow = "hidden";
-    console.log("Modal should be shown now"); // Debugging log
+    console.log("Modal should be shown now - WITH IMAGE ON MOBILE TOO!"); // Debugging log - Clarified message
   }
 
   function closeModal() {
